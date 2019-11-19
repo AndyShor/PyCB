@@ -1,7 +1,7 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AndyShor/PyCB/master?filepath=CSD_notebook_app.ipynb)
 
-**About**
+##About##
 
 This simulation and visualization toolkit provides tools to simulate Charge State Distribuion
 of ions in Multiply Charged Ion sources ( see for example [Gammino](https://arxiv.org/pdf/1410.7974.pdf)) such Electron Beam Ion Source (EBIS, see for example [Zschornack](https://cds.cern.ch/record/1965922/files/CERN-2013-007-p165.pdf)) or Electron Cyclotron Resonance Ion Source (ECRIS).
