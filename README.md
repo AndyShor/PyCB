@@ -6,6 +6,8 @@
 This simulation and visualization toolkit provides tools to simulate Charge State Distribuion
 of ions in Multiply Charged Ion sources ( see for example [Gammino](https://arxiv.org/pdf/1410.7974.pdf)) such Electron Beam Ion Source (EBIS, see for example [Zschornack](https://cds.cern.ch/record/1965922/files/CERN-2013-007-p165.pdf)) or Electron Cyclotron Resonance Ion Source (ECRIS).
 
+![bokeh app screenshot](/screenshots/Bokeh_app_screenshot.png)
+
 Presently there are several isolated legacy projects of this kind, some very specialised, many not maintained or abandoned,
 written in languages with shrinking user base such as Fortran, oftentimes lacking systematic tests.
 There are also proprietary packages such as CHASER by [Zhao](http://dx.doi.org/10.1063/1.4934686) , which seems inactive  (poke [Far-tech](https://www.far-tech.com/chaser.php)).
