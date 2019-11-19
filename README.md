@@ -21,8 +21,7 @@ This toolkit prioritizes transparency, simplicity and ease of use.
 We also pay attention to cross checking of obtained data against known reference values (see **tests** section)
 In present state we focus only on first order processes such as:
 
-* single impact ionization (using full Lotz cross sections [[Lotz1](https://doi.org/10.1007/BF01325928), [Lotz2](https://doi.org/10.1007/BF01392963)] and FAC ionization potentials). This approach gives systemativ underestimation of cross-sectios for high-Z (Z=50+) very highly charged ions such as Bi 82+ due to complex relativistic effects.
-Even general relativistic distorted wave calculations do not catch the difference unless fine effects such as Mdller interaction is included. We recommend for relevant cases
+* single impact ionization (using full Lotz cross sections [[Lotz1](https://doi.org/10.1007/BF01325928), [Lotz2](https://doi.org/10.1007/BF01392963)] and FAC ionization potentials). This approach gives systematic underestimation of cross-sectios for high-Z (Z=50+) very highly charged ions such as Bi 82+ due to complex relativistic effects. Even general relativistic distorted wave calculations do not catch the difference unless fine effects such as Møller interaction is included. We recommend for relevant cases
 to consult [Moores and Reed](https://dx.doi.org/10.1103/PhysRevA.51.R9) and if needed introduce correction factors to Lotz function
 
 * radiative recombination (using Kim and Pratt approximation [KimPratt](https://doi.org/10.1103/PhysRevA.27.2913))
@@ -33,19 +32,14 @@ By the extent of included processes this toolkit is similar to widely used CBSIM
 but expands it and allows users not familiar with Fortran to understand and customize it.
 
 The expansion compared to CBSIM includes use of full Lotz formula and availability of all elements.
-For expandability and customization reasons we provide isolated data-set in human-redable JSON format covering essential parameters of elements such as:
-*ionization potentials calculated with Flexible Atomic Code (FAC by [Gu](https://doi.org/10.1139/p07-197)) by [Mertzig](https://project-ionpotentials.web.cern.ch/project-Ionpotentials/) at CERN. 
-*populaions of subshells calculated with Flexible Atomic Code (FAC by [Gu](https://doi.org/10.1139/p07-197)) by [Mertzig](https://project-ionpotentials.web.cern.ch/project-Ionpotentials/).
-*Lotz coefficients for various shells based on publication by Lotz[[Lotz2](https://doi.org/10.1007/BF01392963)]
+For expandability and customization reasons we provide isolated data set in human-redable JSON format covering essential parameters of elements such as:
+* ionization potentials calculated with Flexible Atomic Code (FAC by [Gu](https://doi.org/10.1139/p07-197)) by [Mertzig](https://project-ionpotentials.web.cern.ch/project-Ionpotentials/) at CERN. 
+* populaions of subshells calculated with Flexible Atomic Code (FAC by [Gu](https://doi.org/10.1139/p07-197)) by [Mertzig](https://project-ionpotentials.web.cern.ch/project-Ionpotentials/).
+* Lotz coefficients for various shells based on publication by Lotz[[Lotz2](https://doi.org/10.1007/BF01392963)]
 
-We omit higher order processes such as double ionization, double charge exchange, ionization heatig, 
-not complete overlap of ion and electron beams in Electron Beam Ion Sources (EBIS).
-We also omit such phenomena as gas cooling and ion-ion energy exchange as well as resonant phenomena such as Dielectronic Recombination.
-As all universally used cross section formulas have error bars in the +40/-30 % it is of marginal use to tune second order effects.
-The benefit may come for more specialized cases, where cross section information is better defined. 
+We omit higher order processes such as double ionization, double charge exchange, ionization heatig, not complete overlap of ion and electron beams in Electron Beam Ion Sources (EBIS). We also omit such phenomena as gas cooling and ion-ion energy exchange as well as resonant phenomena such as Dielectronic Recombination. As all universally used cross section formulas have error bars in the +40/-30 % it is of marginal use to tune second order effects. The benefit may come for more specialized cases, where cross section information is better defined. 
 
-Presently there is no plan to incorporate these processes in the future, for more feature-rich simulations we recommend to watch for development of ebisim,
-where some of it is realized (such as Dielectronic recombination) and some might come in the future. For those who want to develop comprehensive model including all related processes we recommend to have a look at  published works of [Kalagin](https://doi.org/10.1088/0963-0252/7/4/002), [Penetrante](https://doi.org/10.1103/PhysRevA.43.4861) and [Currell and Fussmann](https://doi.org/10.1109/TPS.2005.860072).
+Presently there is no plan to incorporate these processes in the future, for more feature-rich simulations we recommend to watch for development of *ebisim*, where some of it is realized (such as Dielectronic recombination) and some might come in the future. For those who want to develop comprehensive model including all related processes we recommend to have a look at  published works of [Kalagin](https://doi.org/10.1088/0963-0252/7/4/002), [Penetrante](https://doi.org/10.1103/PhysRevA.43.4861) and [Currell and Fussmann](https://doi.org/10.1109/TPS.2005.860072).
 
 # How to use
 
@@ -59,11 +53,11 @@ The toolkit includes several essential components such as:
 
 * csd.py - a file with basic functions such as calculating interaction cross sections or generating plot templates
 
-* reqirements - a file with dependencies. This file also includes dependencies of optional UI's such as Panel and streamlit
+* reqirements.txt - a file with dependencies. This file also includes dependencies of optional UI's such as Panel, but does not include streamlit. To run streanlit_demo.py you would need to install streamlit package additionally.
 
-* simulation.py - an example simulation in pure python code without any user interface
+* simulation.py - an example simulation in pure python code without any user interface apart from final graph.
 
-* CSD_notebook_online.ipynb - Jupyter notebook for interactive simulation no specific UI. Can be used without any python installation using Binder link at the top.
+* CSD_notebook_online.ipynb - Jupyter notebook for interactive simulation without specific UI, output graph is plotted in the notebook. Can be used without any python installation using Binder link at the top.
 
 * CSD_notebook_app.ipynb - Jupter notebook which provides either rich user controls in the notebook or a deployable web application.
 Can be tested without any python installation using Binder link at the top.
@@ -148,7 +142,7 @@ user interface example is given on the screenshot below
 
 
 ## Core functionality
-functions and data structures in CSD.py
+functions and data structures in csd.py
 
 **Element dictionary**. Element information related to ionization process is stored in elements.json file
 For simulation json file is parsed and information about a unique element is extracted based on element name as a key.
