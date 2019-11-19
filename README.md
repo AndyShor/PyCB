@@ -114,15 +114,19 @@ but rather to stay within comfort of protected internal networks inhabited by go
 
 user interface example is given on the screenshot below
 
-< img src="https://github.com/AndyShor/PyCB/blob/master/screenshots/Bokeh_app_screenshot.png"  width=800>
+![bokeh app screenshot](/screenshots/Bokeh_app_screenshot.png | width=800)
 
-To run streamlit_demo.py use
+
+
+To run streamlit_demo.py first install streamlit (not in reqquirements.txt, tested on streamlit 0.49) use
+
+>> pip install streamlit
 
 >>streamlit run streamlit_demo.py 
 
 user interface example is given on the screenshot below
 
-< img src="https://github.com/AndyShor/PyCB/blob/master/screenshots/streamlit_app_screenshot.png"  width=800>
+![bokeh app screenshot](/screenshots/streamlit_app_screenshot.png | width=800)
 
 
 ##Core functionality
