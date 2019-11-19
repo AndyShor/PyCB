@@ -89,37 +89,37 @@ For proper use it is required to install the following packages
  in your Python installation create a virtual environment to avoid conflicts of libraries with the existig installations using venv
  venv will create a virtual Python installation in the env folder
  on Linux and MacOS
-'''
+```
 python3 -m venv env
-'''
+```
 On Windows
-'''
+```
 py -m venv env
-'''
+```
 
 Activate new environmet
 on Linux and MacOS
-'''
+```
 source env/bin/activate
-'''
+```
 
 On Windows
-'''
+```
 .\env\Scripts\activate
-'''
+```
 
 with activated virtual environment install dependencies in the virtual environment by
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 To run notebook with Panel app having UI in the notebook use it as is with Jupyter
 To run notebook with Panel app as a web application change commenting of the last string from using method servable() to use show()
 To run notebook app as a web application accessible from outside of localhost start  Panel with proper permissions such as whitelisting of acceptable request origins or allowing them for all such as
 
-'''
+```
 panel serve CSD_notebook_app.ipynb --allow-websocket-origin=*
-'''
+```
 
 Caution! While Panel claims to not allow execution of external code its level of security is not exactly designed to face exposure to the Internet,
 but rather to stay within comfort of protected internal networks inhabited by good mannered users.
@@ -129,16 +129,17 @@ user interface example is given on the screenshot below
 ![bokeh app screenshot](/screenshots/Bokeh_app_screenshot.png)
 
 
-
 To run streamlit_demo.py first install streamlit (not in reqquirements.txt, tested on streamlit 0.49) use
 
->> pip install streamlit
+```
+pip install streamlit
 
->>streamlit run streamlit_demo.py 
+streamlit run streamlit_demo.py 
+```
 
 user interface example is given on the screenshot below
 
-[![streamlit app screenshot](/screenshots/streamlit_app_screenshot.png)]
+![streamlit app screenshot](/screenshots/streamlit_app_screenshot.png)
 
 
 ## Core functionality
