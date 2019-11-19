@@ -121,10 +121,9 @@ To run notebook app as a web application accessible from outside of localhost st
 panel serve CSD_notebook_app.ipynb --allow-websocket-origin=*
 ```
 
-Caution! While Panel claims to not allow execution of external code its level of security is not exactly designed to face exposure to the Internet,
-but rather to stay within comfort of protected internal networks inhabited by good mannered users.
+**Caution!** While Panel claims to not allow execution of external code its level of security is not exactly designed to face exposure to the Internet, but rather to stay within comfort of protected internal networks inhabited by good mannered users.
 
-user interface example is given on the screenshot below
+ Streamlit user interface example generated with included demo  is given on the screenshot below
 
 ![bokeh app screenshot](/screenshots/Bokeh_app_screenshot.png)
 
