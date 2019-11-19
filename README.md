@@ -114,7 +114,7 @@ but rather to stay within comfort of protected internal networks inhabited by go
 
 user interface example is given on the screenshot below
 
-![bokeh app screenshot](/screenshots/Bokeh_app_screenshot.png | width=800)
+[![bokeh app screenshot](/screenshots/Bokeh_app_screenshot.png | width=800)]
 
 
 
@@ -126,7 +126,7 @@ To run streamlit_demo.py first install streamlit (not in reqquirements.txt, test
 
 user interface example is given on the screenshot below
 
-![bokeh app screenshot](/screenshots/streamlit_app_screenshot.png | width=800)
+[![bokeh app screenshot](/screenshots/streamlit_app_screenshot.png | width=800)]
 
 
 ##Core functionality
