@@ -114,7 +114,7 @@ but rather to stay within comfort of protected internal networks inhabited by go
 
 user interface example is given on the screenshot below
 
-[![bokeh app screenshot](/screenshots/Bokeh_app_screenshot.png)]
+![bokeh app screenshot](/screenshots/Bokeh_app_screenshot.png)
 
 
 
