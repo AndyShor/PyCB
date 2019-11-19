@@ -1,5 +1,6 @@
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AndyShor/PyCB/master?filepath=CSD_notebook_app.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AndyShor/PyCB/master?filepath=CSD_notebook_app.ipynb) [![Actions
+Status](https://github.com/AndyShor/PyCB/workflows/CI/badge.svg)](https://github.com/AndyShor/PyCB/actions)
 
 # About
 
