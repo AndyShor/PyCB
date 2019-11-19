@@ -114,9 +114,14 @@ with activated virtual environment install dependencies in the virtual environme
 pip install -r requirements.txt
 ```
 
-To run notebook with Panel app having UI in the notebook use it as is with Jupyter
-To run notebook with Panel app as a web application change commenting of the last string from using method servable() to use show()
-To run notebook app as a web application accessible from outside of localhost start  Panel with proper permissions such as whitelisting of acceptable request origins or allowing them for all such as
+To run notebook with Panel app having UI in the notebook use it as is with Jupyter.
+To run notebook with Panel app as a web application from the Jupyter Notebook in the last line change string from using method *servable()* to use *show()*.
+To run notebook app  as a web application from CLI use (with *servable()* method)
+
+```
+panel serve CSD_notebook_app.ipynb 
+```
+To make this app accessible from beyond  of localhost  start  Panel with proper permissions such as whitelisting of acceptable request origins or allowing them for all such as
 
 ```
 panel serve CSD_notebook_app.ipynb --allow-websocket-origin=*
