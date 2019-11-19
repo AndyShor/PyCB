@@ -114,7 +114,7 @@ but rather to stay within comfort of protected internal networks inhabited by go
 
 user interface example is given on the screenshot below
 
-![](https://github.com/AndyShor/PyCB/blob/master/screenshots/Bokeh_app_screenshot.png | width=800)
+< img src="https://github.com/AndyShor/PyCB/blob/master/screenshots/Bokeh_app_screenshot.png"  width=800>
 
 To run streamlit_demo.py use
 
@@ -122,7 +122,7 @@ To run streamlit_demo.py use
 
 user interface example is given on the screenshot below
 
-![](https://github.com/AndyShor/PyCB/blob/master/screenshots/streamlit_app_screenshot.png | width=800)
+< img src="https://github.com/AndyShor/PyCB/blob/master/screenshots/streamlit_app_screenshot.png"  width=800>
 
 
 ##Core functionality
@@ -223,23 +223,42 @@ on example of Fe in charge tsates 8,16,24,26 for electron energies 2964, 9646, 1
 #References
 
 [Becker](https://dx.doi.org/10.1088/1742-6596/58/1/102)
+
 [Currell and Fussmann](https://doi.org/10.1109/TPS.2005.860072)
+
 [Far-tech](https://www.far-tech.com/chaser.php)
+
 [Gammino](https://arxiv.org/pdf/1410.7974.pdf)
+
 [Gu](https://doi.org/10.1139/p07-197)
+
 [Kalagin](https://doi.org/10.1088/0963-0252/7/4/002)
+
 [KimPratt](https://doi.org/10.1103/PhysRevA.27.2913)
+
 [Kravis](https://doi.org/10.1103/PhysRevA.52.1206)
+
 [Lotz1](https://doi.org/10.1007/BF01325928)
+
 [Lotz2](https://doi.org/10.1007/BF01392963)
+
 [Marrs](https://doi.org/10.1103/PhysRevA.56.1338)
+
 [Moores and Reed](https://dx.doi.org/10.1103/PhysRevA.51.R9)
+
 [MuellerSalzborn](https://https://www.sciencedirect.com/science/article/abs/pii/0375960177906727?via%3Dihub)
+
 [Pahl](https://github.com/HPLegion/ebisim)
+
 [Penetrante](https://doi.org/10.1103/PhysRevA.43.4861)
+
 [Trzhaskovskaya](https://dx.doi.org/10.1016/j.adt.2007.09.002)
+
 [Watanabe](https://doi.org/10.1088/0953-4075/35/24/311)
+
 [Zhao](http://dx.doi.org/10.1063/1.4934686)
+
 [Zschornack](https://cds.cern.ch/record/1965922/files/CERN-2013-007-p165.pdf)
+
 
 
