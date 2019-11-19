@@ -20,13 +20,13 @@ This toolkit prioritizes transparency, simplicity and ease of use.
 We also pay attention to cross checking of obtained data against known reference values (see **unit tests** section)
 In present state we focus only on first order processes such as:
 
-*single impact ionization (using full Lotz cross sections [[Lotz1](https://doi.org/10.1007/BF01325928), [Lotz2](https://doi.org/10.1007/BF01392963)] and FAC ionization potentials). This approach gives systemativ underestimation of cross-sectios for high-Z (Z=50+) very highly charged ions such as Bi 82+ due to complex relativistic effects.
+* single impact ionization (using full Lotz cross sections [[Lotz1](https://doi.org/10.1007/BF01325928), [Lotz2](https://doi.org/10.1007/BF01392963)] and FAC ionization potentials). This approach gives systemativ underestimation of cross-sectios for high-Z (Z=50+) very highly charged ions such as Bi 82+ due to complex relativistic effects.
 Even general relativistic distorted wave calculations do not catch the difference unless fine effects such as Mdller interaction is included. We recommend for relevant cases
 to consult [Moores and Reed](https://dx.doi.org/10.1103/PhysRevA.51.R9) and if needed introduce correction factors to Lotz function
 
-*radiative recombination (using Kim and Pratt approximation [KimPratt](https://doi.org/10.1103/PhysRevA.27.2913))
+* radiative recombination (using Kim and Pratt approximation [KimPratt](https://doi.org/10.1103/PhysRevA.27.2913))
 
-*charge exchange (using Mueller-Salzborn approximation [MuellerSalzborn](https://https://www.sciencedirect.com/science/article/abs/pii/0375960177906727?via%3Dihub)
+* charge exchange (using Mueller-Salzborn approximation [MuellerSalzborn](https://https://www.sciencedirect.com/science/article/abs/pii/0375960177906727?via%3Dihub)
 
 By the extent of included processes this toolkit is similar to widely used CBSIM by R. Becker [[Becker1](https://dx.doi.org/10.1088/1742-6596/58/1/102)],
 but expands it and allows users not familiar with Fortran to understand and customize it.
