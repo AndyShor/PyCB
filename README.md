@@ -10,7 +10,7 @@ Presently there are several isolated legacy projects of this kind, some very spe
 written in languages with shrinking user base such as Fortran, oftentimes lacking systematic tests.
 There are also proprietary packages such as CHASER by [Zhao](http://dx.doi.org/10.1063/1.4934686) , which seems inactive  (poke [Far-tech](https://www.far-tech.com/chaser.php)).
 
-This  work means to  serve the role of CBSIM by [Becker](https://dx.doi.org/10.1088/1742-6596/58/1/102)- the basic, free and open source tool.
+This  work means to  serve the role of CBSIM by [Becker](https://dx.doi.org/10.1088/1742-6596/58/1/102) - the basic, free and open source tool.
 This toolkit is designed to be used mostly with Jupyter notebooks, or as a deployable Panel-based web application, see **How to use** section.
 For more  programming-like OOP-style solution have a look at ebisim Python module by Hannes Pahl ([Pahl](https://github.com/HPLegion/ebisim)).
 
