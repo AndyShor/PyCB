@@ -17,7 +17,7 @@ This toolkit is designed to be used mostly with Jupyter notebooks, or as a deplo
 For more  programming-like OOP-style solution have a look at ebisim Python module by Hannes Pahl ([Pahl](https://github.com/HPLegion/ebisim)).
 
 This toolkit prioritizes transparency, simplicity and ease of use.
-We also pay attention to cross checking of obtained data against known reference values (see **unit tests** section)
+We also pay attention to cross checking of obtained data against known reference values (see **tests** section)
 In present state we focus only on first order processes such as:
 
 * single impact ionization (using full Lotz cross sections [[Lotz1](https://doi.org/10.1007/BF01325928), [Lotz2](https://doi.org/10.1007/BF01392963)] and FAC ionization potentials). This approach gives systemativ underestimation of cross-sectios for high-Z (Z=50+) very highly charged ions such as Bi 82+ due to complex relativistic effects.
@@ -198,7 +198,7 @@ returns a bokeh figure object with formattig preset for CSD display. Optional ar
 There are uit test aiming to verify proper creation of the plot template. These tests look at the bokeh figure object properties to make sure that the object is created properly. If properties such as axis titles will be changed those tests will fail. It will not have impact on performance, but may be misleading.
 
 
-## Unit tests included in the toolkit.
+## Tests included in the toolkit.
 
 **test_hydrogen()** test correct importing from elements.json on an example of Hydrogen, test passed if correct ionization energy is provided by readout
 
@@ -230,10 +230,6 @@ on example of Fe in charge tsates 8,16,24,26 for electron energies 2964, 9646, 1
 **test_ion_velosity()** test correct calculation of ion velocity in cm/s on example of Hydrogen ions at 100 eV temperature (p and D in natural abundance) 
 
 **test_rates()** test correct calculation of reaction rates on example of He and 100 eV 100 A/cm2 electron beam
-
-
-
-
 
 
 # References
