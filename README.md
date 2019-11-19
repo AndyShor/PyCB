@@ -1,5 +1,5 @@
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AndyShor/PyCB/master?urlpath=https%3A%2F%2Fgithub.com%2FAndyShor%2FPyCB%2Fblob%2Fmaster%2FCSD_notebook_app.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AndyShor/PyCB/master?filepath=CSD_notebook_app.ipynb)
 
 #About
 
