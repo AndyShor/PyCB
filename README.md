@@ -200,12 +200,6 @@ There are uit test aiming to verify proper creation of the plot template. These 
 
 ## Tests included in the toolkit.
 
-**test_hydrogen()** test correct importing from elements.json on an example of Hydrogen, test passed if correct ionization energy is provided by readout
-
-**test_csd_plot()** test correct creation of dummy CSD plot, looks at bokeh plot attributes, test passed if log_axis_label is set to'time[s]'
-
-**test_cs_plot()**  test correct creation of dummy Cross sections plot, looks at bokeh plot attributes, test passed if linear_axis_label is set to 'charge state'
-
 **test_mo_ei_watanabe()** test error bars of Lotz cross section versus experimental data on example of H-like Mo from 
 [Watanabe](https://doi.org/10.1088/0953-4075/35/24/311)  passed if error below 30% (error specified by Lotz, in present built error about 12%)
 
@@ -230,6 +224,12 @@ on example of Fe in charge tsates 8,16,24,26 for electron energies 2964, 9646, 1
 **test_ion_velosity()** test correct calculation of ion velocity in cm/s on example of Hydrogen ions at 100 eV temperature (p and D in natural abundance) 
 
 **test_rates()** test correct calculation of reaction rates on example of He and 100 eV 100 A/cm2 electron beam
+
+**test_hydrogen()** test correct importing from elements.json on an example of Hydrogen, test passed if correct ionization energy is provided by readout
+
+**test_csd_plot()** test correct creation of dummy CSD plot, looks at bokeh plot attributes, test passed if log_axis_label is set to'time[s]'
+
+**test_cs_plot()**  test correct creation of dummy Cross sections plot, looks at bokeh plot attributes, test passed if linear_axis_label is set to 'charge state'
 
 
 # References
