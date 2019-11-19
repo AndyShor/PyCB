@@ -13,7 +13,6 @@ jobs:
       uses: actions/setup-python@v1
       with:
           python-version: 3.7
-      run: echo Hello, world!
     - name: Run pytest
       run: pytest test_func_pytest.py
         
