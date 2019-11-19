@@ -1,7 +1,7 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AndyShor/PyCB/master?filepath=CSD_notebook_app.ipynb)
 
-**About**
+# About
 
 This simulation and visualization toolkit provides tools to simulate Charge State Distribuion
 of ions in Multiply Charged Ion sources ( see for example [Gammino](https://arxiv.org/pdf/1410.7974.pdf)) such Electron Beam Ion Source (EBIS, see for example [Zschornack](https://cds.cern.ch/record/1965922/files/CERN-2013-007-p165.pdf)) or Electron Cyclotron Resonance Ion Source (ECRIS).
@@ -46,70 +46,80 @@ The benefit may come for more specialized cases, where cross section information
 Presently there is no plan to incorporate these processes in the future, for more feature-rich simulations we recommend to watch for development of ebisim,
 where some of it is realized (such as Dielectronic recombination) and some might come in the future. For those who want to develop comprehensive model including all related processes we recommend to have a look at  published works of [Kalagin](https://doi.org/10.1088/0963-0252/7/4/002), [Penetrante](https://doi.org/10.1103/PhysRevA.43.4861) and [Currell and Fussmann](https://doi.org/10.1109/TPS.2005.860072).
 
-#How to use
+# How to use
 
-##What is included
+## What is included
 The toolkit includes several essential components such as:
-*elements.json - file with elements data
+* elements.json - file with elements data
 
-*dev folder contains raw data from FAC simulations and a python script to bundle them into json, not required for regular use
+* dev folder contains raw data from FAC simulations and a python script to bundle them into json, not required for regular use
 
-*screenshots folder conatins screen shots of user interface options
+* screenshots folder conatins screen shots of user interface options
 
-*csd.py - a file with basic functions such as calculating interaction cross sections or generating plot templates
+* csd.py - a file with basic functions such as calculating interaction cross sections or generating plot templates
 
-*reqirements - a file with dependencies. This file also includes dependencies of optional UI's such as Panel and streamlit
+* reqirements - a file with dependencies. This file also includes dependencies of optional UI's such as Panel and streamlit
 
-*simulation.py - an example simulation in pure python code without any user interface
+* simulation.py - an example simulation in pure python code without any user interface
 
-*CSD_notebook_online.ipynb - Jupyter notebook for interactive simulation no specific UI. Can be used without any python installation using Binder link at the top.
+* CSD_notebook_online.ipynb - Jupyter notebook for interactive simulation no specific UI. Can be used without any python installation using Binder link at the top.
 
-*CSD_notebook_app.ipynb - Jupter notebook which provides either rich user controls in the notebook or a deployable web application.
+* CSD_notebook_app.ipynb - Jupter notebook which provides either rich user controls in the notebook or a deployable web application.
 Can be tested without any python installation using Binder link at the top.
 
-*streamlit_demo.py - a python script that provides rich user UI based on streamlit package see below.
+* streamlit_demo.py - a python script that provides rich user UI based on streamlit package see below.
 
-*test_func_pytest.py - a collection of unit test checking toolkit integrity and comparing cross section functions to known reference values. Run tests if modified anything.
+* test_func_pytest.py - a collection of unit test checking toolkit integrity and comparing cross section functions to known reference values. Run tests if modified anything.
 
 
-##Dependencies.
+## Dependencies.
 
 For proper use it is required to install the following packages
-*numpy - for basic array hadlig
-*scipy - for ODE integration
-*json - for parsing element data
-*bokeh - for creating plots
-*pytest - for running unit test assuring toolkit integrity and checking against literature reference values
+* numpy - for basic array hadlig
+* scipy - for ODE integration
+* json - for parsing element data
+* bokeh - for creating plots
+* pytest - for running unit test assuring toolkit integrity and checking against literature reference values
 
-*panel - one of the UI alternatives, optional
-*streamlit - second UI alternative, optional
+* panel - one of the UI alternatives, optional
+* streamlit - second UI alternative, optional not included in requirements to ease loadig into binder
 
-##Installation
+## Installation
 
  in your Python installation create a virtual environment to avoid conflicts of libraries with the existig installations using venv
  venv will create a virtual Python installation in the env folder
  on Linux and MacOS
->> python3 -m venv env
+'''
+python3 -m venv env
+'''
 On Windows
->> py -m venv env
-
+'''
+py -m venv env
+'''
 
 Activate new environmet
 on Linux and MacOS
->> source env/bin/activate
+'''
+source env/bin/activate
+'''
 
 On Windows
->> .\env\Scripts\activate
+'''
+.\env\Scripts\activate
+'''
 
 with activated virtual environment install dependencies in the virtual environment by
-
->> pip install -r requirements.txt
+'''
+pip install -r requirements.txt
+'''
 
 To run notebook with Panel app having UI in the notebook use it as is with Jupyter
 To run notebook with Panel app as a web application change commenting of the last string from using method servable() to use show()
 To run notebook app as a web application accessible from outside of localhost start  Panel with proper permissions such as whitelisting of acceptable request origins or allowing them for all such as
 
->>
+'''
+panel serve CSD_notebook_app.ipynb --allow-websocket-origin=*
+'''
 
 Caution! While Panel claims to not allow execution of external code its level of security is not exactly designed to face exposure to the Internet,
 but rather to stay within comfort of protected internal networks inhabited by good mannered users.
@@ -131,7 +141,7 @@ user interface example is given on the screenshot below
 [![streamlit app screenshot](/screenshots/streamlit_app_screenshot.png)]
 
 
-##Core functionality
+## Core functionality
 functions and data structures in CSD.py
 
 **Element dictionary**. Element information related to ionization process is stored in elements.json file
@@ -188,7 +198,7 @@ returns a bokeh figure object with formattig preset for CSD display. Optional ar
 There are uit test aiming to verify proper creation of the plot template. These tests look at the bokeh figure object properties to make sure that the object is created properly. If properties such as axis titles will be changed those tests will fail. It will not have impact on performance, but may be misleading.
 
 
-##Unit tests included in the toolkit.
+## Unit tests included in the toolkit.
 
 **test_hydrogen()** test correct importing from elements.json on an example of Hydrogen, test passed if correct ionization energy is provided by readout
 
@@ -226,7 +236,7 @@ on example of Fe in charge tsates 8,16,24,26 for electron energies 2964, 9646, 1
 
 
 
-#References
+# References
 
 [Becker](https://dx.doi.org/10.1088/1742-6596/58/1/102)
 
