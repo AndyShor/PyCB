@@ -114,15 +114,18 @@ but rather to stay within comfort of protected internal networks inhabited by go
 
 user interface example is given on the screenshot below
 
+![](https://github.com/AndyShor/PyCB/blob/master/screenshots/Bokeh_app_screenshot.png | width=800)
+
 To run streamlit_demo.py use
 
 >>streamlit run streamlit_demo.py 
 
 user interface example is given on the screenshot below
 
+![](https://github.com/AndyShor/PyCB/blob/master/screenshots/streamlit_app_screenshot.png | width=800)
 
 
-##Core fuW 
+##Core functionality
 functions and data structures in CSD.py
 
 **Element dictionary**. Element information related to ionization process is stored in elements.json file
