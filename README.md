@@ -6,7 +6,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AndyShor/PyCB/master?filepath=CSD_notebook_online.ipynb) - Open notebook with simple inline graphics 
 
 [![Actions
-Status](https://github.com/AndyShor/PyCB/workflows/build_and_test/badge.svg)](https://github.com/AndyShor/PyCB/actions) - -    Status of build and testing 
+Status](https://github.com/AndyShor/PyCB/workflows/build_and_test/badge.svg)](https://github.com/AndyShor/PyCB/actions) - Status of build and testing 
 
 # About
 
