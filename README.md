@@ -1,7 +1,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![Actions
-Status](https://github.com/AndyShor/PyCB/workflows/build_and_test/badge.svg)](https://github.com/AndyShor/PyCB/actions) - Status of build and testing [![codecov](https://codecov.io/gh/AndyShor/PyCB/branch/master/graph/badge.svg)](https://codecov.io/gh/AndyShor/PyCB)
+Status](https://github.com/AndyShor/PyCB/workflows/build_and_test/badge.svg)](https://github.com/AndyShor/PyCB/actions) [![codecov](https://codecov.io/gh/AndyShor/PyCB/branch/master/graph/badge.svg)](https://codecov.io/gh/AndyShor/PyCB)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AndyShor/PyCB/master?filepath=CSD_notebook_app.ipynb) -  interactive notebook with Panel user interface
 
