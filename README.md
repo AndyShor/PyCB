@@ -130,12 +130,14 @@ panel serve CSD_notebook_app.ipynb --allow-websocket-origin=*
 
 **Caution!** While Panel claims to not allow execution of external code its level of security is not exactly designed to face exposure to the Internet, but rather to stay within comfort of protected internal networks inhabited by good mannered users.
 
- Streamlit user interface example generated with included demo  is given on the screenshot below
+ Panel-based user interface example generated with included demo app  is given on the screenshot below
 
 ![bokeh app screenshot](/screenshots/Bokeh_app_screenshot.png)
 
 
-To run streamlit_demo.py first install streamlit (not in reqquirements.txt, tested on streamlit 0.49) use
+An alternative Ui option is based on Streamlit. Requirement for streamlit is not included in requirements.txt to speed up
+generating enviroments in Binder for Jupyter notebook based applications (with Panel or plain).
+Therefore to run streamlit_demo.py first install streamlit ( tested on streamlit 0.49) use
 
 ```
 pip install streamlit
