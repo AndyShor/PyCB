@@ -6,7 +6,9 @@ coverage:
         flags: csd
         target: 90%
       
-
+ignore:
+  - simulation.py
+  - streamlit_demo.py
 flags:
   # filter the folder(s) you wish to measure by that flag
   csd:
