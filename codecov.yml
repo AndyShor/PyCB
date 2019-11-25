@@ -1,18 +1,17 @@
+codecov:
+  require_ci_to_pass: yes
+
 coverage:
+  precision: 2
+  round: down
+  range: "70...100"
+
   status:
-    project:
-      default: off
-      csd:
-        flags: csd
-        target: 90%
-      
+    project: yes
+    patch: yes
+    changes: no
+     
 ignore:
   - "simulation.py"
   - "streamlit_demo.py"
-flags:
-  # filter the folder(s) you wish to measure by that flag
-  csd:
-    # only include files in the backend folder
-    paths:
-      - csd.py
- 
+
