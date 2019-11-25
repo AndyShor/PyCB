@@ -1,0 +1,16 @@
+coverage:
+  status:
+    project:
+      default: off
+      csd:
+        flags: csd
+        target: 90%
+      
+
+flags:
+  # filter the folder(s) you wish to measure by that flag
+  csd:
+    # only include files in the backend folder
+    paths:
+      - csd.py
+ 
