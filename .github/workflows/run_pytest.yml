@@ -19,7 +19,7 @@ jobs:
         pip install -r requirements.txt
         pip install pytest
     - name: Run pytest
-      run: pytest test_func_pytest.py --cov=./
+      run: pytest test_func_pytest.py --cov=./ --cov-report=xml
     - uses: actions/checkout@master
     - uses: actions/checkout@master
     - uses: codecov/codecov-action@v1
