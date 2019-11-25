@@ -20,8 +20,6 @@ jobs:
         pip install pytest
     - name: Run pytest
       run: pytest  --cov=./ --cov-report=xml
-    - uses: actions/checkout@master
-    - uses: actions/checkout@master
     - uses: codecov/codecov-action@v1
       with:
          token: ${{ secrets.codecov_token }} #required
@@ -29,4 +27,6 @@ jobs:
          flags: unittests
          name: codecov-umbrella
          yml: codecov.yml
+    - uses: actions/checkout@master
+    - uses: actions/checkout@master
          
