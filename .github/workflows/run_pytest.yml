@@ -19,7 +19,7 @@ jobs:
         pip install -r requirements.txt
         pip install pytest
     - name: Run pytest
-      run: pytest  --cov=./ --cov-report=xml
+      run: pytest test_func_pytest.py  --cov=./ --cov-report=xml
     - uses: codecov/codecov-action@v1
       with:
          token: ${{ secrets.codecov_token }} #required
