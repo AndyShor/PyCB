@@ -2,4 +2,5 @@ numpy==1.15.4
 scipy==1.1.0
 bokeh==1.4.0
 pytest==3.0.7
+pytest-cov
 panel==0.6.2
