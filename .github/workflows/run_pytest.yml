@@ -27,6 +27,11 @@ jobs:
          flags: unittests
          name: codecov-umbrella
          yml: codecov.yml
+    - name: Run pylint
+      run: |
+        pip install pylint
+        pip install pylint-badge
+        pylint-badge csd.py
     - uses: actions/checkout@master
     - uses: actions/checkout@master
          
