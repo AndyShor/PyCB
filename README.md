@@ -12,7 +12,7 @@ Status](https://github.com/AndyShor/PyCB/workflows/build_and_test/badge.svg)](ht
 # About
 
 This simulation and visualization toolkit provides tools to simulate Charge State Distribuion
-of ions in Multiply Charged Ion sources ( see for example [Gammino](https://arxiv.org/pdf/1410.7974.pdf)) such Electron Beam Ion Source (EBIS, see for example [Zschornack](https://cds.cern.ch/record/1965922/files/CERN-2013-007-p165.pdf)) or Electron Cyclotron Resonance Ion Source (ECRIS).
+of ions in Multiply Charged Ion sources ( see for example [Gammino](https://arxiv.org/pdf/1410.7974.pdf)) for example Electron Beam Ion Source (EBIS, see for example [Zschornack](https://cds.cern.ch/record/1965922/files/CERN-2013-007-p165.pdf)) or Electron Cyclotron Resonance Ion Source (ECRIS). The toolkit includes easy to use and expadable interface options like the the one shown below.
 
 ![interface](/screenshots/interface.gif)
 
