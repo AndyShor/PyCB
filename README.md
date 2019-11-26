@@ -74,7 +74,7 @@ Can be tested without any python installation using Binder link at the top.
 * test_func_pytest.py - a collection of unit test checking toolkit integrity and comparing cross section functions to known reference values. Run tests if modified anything.
 
 
-## Dependencies.
+## Dependencies
 
 For proper use it is required to install the following packages
 * numpy - for basic array handling
@@ -206,7 +206,7 @@ returns a bokeh figure object with formatting preset for CSD display. Optional a
 There are unit test aiming to verify proper creation of the plot template. These tests look at the bokeh figure object properties to make sure that the object is created properly. If properties such as axis titles have changed, those tests will fail. It will not have impact on performance, but may be misleading.
 
 
-## Tests included in the toolkit.
+## Tests included in the toolkit
 
 **test_mo_ei_watanabe()** test error bars of Lotz cross section versus experimental data on example of H-like Mo from 
 [Watanabe](https://doi.org/10.1088/0953-4075/35/24/311)  passed if error below 30% (error specified by Lotz, in present build error about 12%)
