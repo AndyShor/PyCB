@@ -210,18 +210,18 @@ There are uit test aiming to verify proper creation of the plot template. These 
 ## Tests included in the toolkit.
 
 **test_mo_ei_watanabe()** test error bars of Lotz cross section versus experimental data on example of H-like Mo from 
-[Watanabe](https://doi.org/10.1088/0953-4075/35/24/311)  passed if error below 30% (error specified by Lotz, in present built error about 12%)
+[Watanabe](https://doi.org/10.1088/0953-4075/35/24/311)  passed if error below 30% (error specified by Lotz, in present build error about 12%)
 
 **test_ei_marrs()** test error bars of Lotz cross section versus experimental data on example of H-like Mo from [Marrs](https://doi.org/10.1103/PhysRevA.56.1338)
- passed if error below 30% (error specified by Lotz, in present built error about 13%)
+ passed if error below 30% (error specified by Lotz, in present build error about 13%)
 
-**test_rr_marrs()** test correctness of RR cross sections versus experiemntal values for RR recombination of bare Mo to H-like Mo, based on [Marrs](https://doi.org/10.1103/PhysRevA.56.1338) experimental data, test passed if mean error below 30% ( in present built averaged error about 17%)
+**test_rr_marrs()** test correctness of RR cross sections versus experiemntal values for RR recombination of bare Mo to H-like Mo, based on [Marrs](https://doi.org/10.1103/PhysRevA.56.1338) experimental data, test passed if mean error below 30% ( in present build averaged error about 17%)
 
 **test_w_rr_trzhaskovskaya()** test correctness of RR cross section versus sophisticated theoretical values by [Trzhaskovskaya](https://dx.doi.org/10.1016/j.adt.2007.09.002),
 on example of Fe in charge tsates 8,16,24,26 for electron energies 2964, 9646, 15464, 31392, 50327 eV, test passed if average error over these 20 cases is below 30%
-( in present built averaged error about 25%)
+( in present build averaged error about 25%)
 
-**test_cx_kravis()** test correctness of CX cross sections versus experimental data for Ar6+,Ar7+,Ar8+,Ar9+, Ar11+ in H2 reported by [Kravis](https://doi.org/10.1103/PhysRevA.52.1206). highest energy values from Kravis used for test to make comparison to Salzborn-Mueller comply with assumptions of SM model and the data they originally fitted. Test is passed if average error over test cases is below 30% ( in present built averaged error about 26%)
+**test_cx_kravis()** test correctness of CX cross sections versus experimental data for Ar6+,Ar7+,Ar8+,Ar9+, Ar11+ in H2 reported by [Kravis](https://doi.org/10.1103/PhysRevA.52.1206). highest energy values from Kravis used for test to make comparison to Salzborn-Mueller comply with assumptions of SM model and the data they originally fitted. Test is passed if average error over test cases is below 30% ( in present build averaged error about 26%)
 
 
 **test_csd_evolution()** test correctness of CSD evolution calculation based on simplified example, returned value of time derivatives is compared to a test answer.
