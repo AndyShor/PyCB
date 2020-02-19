@@ -46,20 +46,28 @@ ch_states_to_show=st.slider('Show charge states', min_value=0, max_value=len(ELE
 T_ion = 300  # ion temperature in eV
 ch_states = np.linspace(0, len(ELEM), len(ELEM) + 1)  # define charge states
 
-# ----- define time independent reaction rates
-rates = csd.get_reaction_rates(elem=ELEM, j_e=J, e_e=ENERGY,
-                               t_ion=T_ion, p_vac=P_VAC, ip=IP, ch_states=ch_states)
 
-initial_CSD = np.zeros(len(ch_states))
-initial_CSD[0] = 1  # starts from some gas injected in a shot
-# initial_CSD[1]=1   # starts from primary ion injection in 1+ charge state
+
 
 time = np.logspace(Log_t_lower, Log_t_upper, num=1000)  # generate  log linear time range
 
-# solve system of ODEs
-# integrate ODE system
-solution = odeint(csd.csd_evolution, initial_CSD, time, args=rates)
+
+# below is the cached function that allows to minimize heave recalculations if only UI parameters were changed
+@st.cache
+def cached_solution(ELEM, J, ENERGY, T_ion, P_VAC, IP, ch_states):
+    # ----- define time independent reaction rates
+    rates = csd.get_reaction_rates(elem=ELEM, j_e=J, e_e=ENERGY, t_ion=T_ion, p_vac=P_VAC, ip=IP, ch_states=ch_states)
+    initial_CSD = np.zeros(len(ch_states))
+    initial_CSD[0] = 1
+    # solve system of ODEs
+    solution = odeint(csd.csd_evolution, initial_CSD, time, args=rates)
+
+    return solution
+
+solution=cached_solution(ELEM, J, ENERGY, T_ion, P_VAC, IP, ch_states)
 csd_plot = csd.csd_base_figure()  # instantinate default CSD figure
+
+
 
 # generate color palette for ploting
 colors = [csd.color_picker(len(ch_states), i, palette) for i in range(len(ch_states))]
@@ -78,14 +86,14 @@ for i in range(ch_states_to_show[0], ch_states_to_show[1]+1, 1):
 if not show_legend:
     csd_plot.legend.items=[]
 
-csd_plot.sizing_mode = 'fixed'
+csd_plot.sizing_mode = 'stretch_width'
 csd_plot.title.text = ELEMENT_NAME + ',  Eₑ = ' + \
                       str(round(ENERGY / 1000, 2)) + ' keV, ' + 'Jₑ=' + \
                       str(round(J, 0)) + ' A/cm², ' + 'Pᵥ=' + str(P_VAC) + ' mbar '
 csd_plot.title.text_font_style = "normal"
-csd_plot.sizing_mode = 'stretch_width'
+#csd_plot.sizing_mode = 'stretch_width'
 csd_plot.width = 1000
-csd_plot.height = 800
+csd_plot.height = 600
 
 #st.show(csd_plot)
 st.bokeh_chart(csd_plot)
