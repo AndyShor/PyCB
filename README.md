@@ -145,7 +145,7 @@ pip install streamlit
 streamlit run streamlit_demo.py 
 ```
 
-user interface example is given on the screenshot below
+user interface example is given on the screenshot below ( wide-mode shown, in running app go to ≡ -> Settings -> Show app in wide mode)
 
 ![streamlit app screenshot](/screenshots/streamlit_app_screenshot.png)
 
