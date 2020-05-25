@@ -85,6 +85,7 @@ For proper use it is required to install the following packages
 
 * panel - one of the UI alternatives, optional
 * streamlit - second UI alternative, optional not included in requirements to ease loading into binder
+* numba - just-in-time compilation used to speed up some calculation functions in CSD module. Is optional and can be reverted rather easily by removing related decorators. Main purpose was to reduce latency in online applications such as powered by streamlit. Only makes sense together with speed-optimized graphics using special bokeh tools such as Multiline and LabelSet. Without graphics optimization the simulation itself is not a limiting factor. For tips on faster graphics look at simulations.py
 
 ## Installation
 
