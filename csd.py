@@ -7,6 +7,8 @@ import json
 import numpy as np  # import numpy for general array operations
 from bokeh.models import PrintfTickFormatter, HoverTool, Legend
 from bokeh.plotting import figure
+import numba
+from numba import jit
 
 ELEM_NAMES = ["H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", "Na",
               "Mg", "Al", "Si", "P", "S", "Cl", "Ar", "K", "Ca", "Sc", "Ti",
@@ -34,7 +36,7 @@ ELEM_MASSES = [1.0079, 4.0026, 6.941, 9.0122, 10.811, 12.0107, 14.0067, 15.9994,
 
 CONST = {"k_b": 1.38E-23, "q": 1.6E-19, "RT": 300, "Ry": 13.6}
 
-
+@jit()
 def color_picker(total_items, current_item, palette):
     """ pick color for charge states"""
     if total_items < len(palette):
@@ -42,7 +44,8 @@ def color_picker(total_items, current_item, palette):
     if total_items >= len(palette):
         return palette[current_item % len(palette)]
 
-
+#just-in-time compiled function with predefined signature to speed up calculation
+@jit(numba.float64(numba.int32,numba.int32,numba.float32), nopython=True)
 def cx_sm_cs(i, k, ionization_potential):
     """Charge exchange cross section for single and multiple electron capture"""
     if i == 0:
@@ -137,7 +140,8 @@ def ei_lotz_cs(elem, i, e_e):
                     * populations * np.log(e_e / energies) / (e_e * energies))
     return sigma * 1E-14
 
-
+#Just-in-time compiled function to speed up calculation
+@jit( nopython=True)
 def csd_evolution(abundances, time, rei, rrr, rcx):
     """
     define RHS for time derivative system of equations"""
@@ -155,8 +159,8 @@ def csd_evolution(abundances, time, rei, rrr, rcx):
 
     return derivatives
 
-
-def csd_base_figure(add_legend=True):
+# use add_custom_hover=False call for plotting with bokeh multiline
+def csd_base_figure(add_legend=True, add_custom_hover=True):
     """ function to make a CSD plot dummy"""
     fig = figure(width=800, height=600, sizing_mode='scale_both',
                  tools=['pan', 'box_zoom', 'reset', 'save', 'crosshair'],
@@ -181,7 +185,9 @@ def csd_base_figure(add_legend=True):
         <b>time [s] </b> @x <br>
         <b>Relative abundance: </b> @y
     """
-    fig.add_tools(custom_hover)
+    if add_custom_hover:
+        fig.add_tools(custom_hover)
+
     if add_legend:
         legend = Legend(items=[])
         fig.add_layout(legend)
@@ -233,6 +239,7 @@ def get_element_data(name):
     elem = {int(k): v for k, v in elements_data[element_name].items()}
     return elem
 
+
 def get_neutral_density(pressure, t_gas=CONST['RT']):
     """
     returns neutral signal"""
@@ -247,6 +254,7 @@ def get_ion_velocity(elem, t_ion):
     m_i = ELEM_MASSES[len(elem) - 1] * 1.6726E-27  # ion mass kg
     v_i = 100 * (8 * t_ion * 1.6E-19 / (3.1416 * m_i)) ** 0.5  # ion velocity cm/s
     return v_i
+
 
 def get_reaction_rates(*, elem, j_e, e_e, t_ion, p_vac, ip, ch_states):
     """

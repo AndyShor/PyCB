@@ -6,7 +6,7 @@ calculation with user interface based on streamlit package
 import streamlit as st
 import numpy as np
 from bokeh.palettes import Category20_20 as palette  # import bokeh palette for
-from bokeh.models import Label
+from bokeh.models import ColumnDataSource, Label, LabelSet
 #from bokeh.plotting import figure, output_file, show
 from scipy.integrate import odeint  # import odeint to integrate system of ODE
 import csd
@@ -72,17 +72,45 @@ csd_plot = csd.csd_base_figure()  # instantinate default CSD figure
 # generate color palette for ploting
 colors = [csd.color_picker(len(ch_states), i, palette) for i in range(len(ch_states))]
 
+if show_labels:
+
+    x_label=[time[np.argmax(solution[:, i])] for i in range(ch_states_to_show[0], ch_states_to_show[1]+1, 1)]
+    y_label=[np.amax(solution[:, i]) + 0.01 for i in range(ch_states_to_show[0], ch_states_to_show[1]+1, 1)]
+    text_label=[ ''.join([str(i),'+']) for i in range(ch_states_to_show[0], ch_states_to_show[1]+1, 1)]
+
+    multi_line_source = ColumnDataSource({
+        'color': colors[ch_states_to_show[0]:ch_states_to_show[1]+1],
+        'x_label': x_label,
+        'y_label': y_label,
+        'text_label': text_label
+
+    })
+
+    csd_plot.add_layout(
+        LabelSet(
+            x='x_label',
+            y='y_label',
+            text='text_label',
+            source=multi_line_source,
+            level="overlay",
+            x_offset=0,
+            y_offset=0,
+            render_mode="canvas",
+            text_font_size="10pt",
+            text_color='color',
+            background_fill_color="white",
+            border_line_color="white",
+        )
+    )
+
+
+
 # populate CSD figure and legend
 
-for i in range(ch_states_to_show[0], ch_states_to_show[1]+1, 1):
-    current_color = csd.color_picker(len(ch_states), i, palette)
-    csd_plot.line(time, solution[:, i], color=colors[i],
-                  line_width=3, muted_alpha=0.2, muted_color=colors[i],
-                  legend_label=ELEMENT_NAME+str(i)+'+')
-    if show_labels:
-        peak_label = Label(x=time[np.argmax(solution[:, i])], y=max(solution[:, i]) + 0.01,
-                       text=str(i) + '+', text_color=colors[i])
-        csd_plot.add_layout(peak_label)
+lines = [csd_plot.line(time, solution[:, i], color=colors[i], line_width=3,
+                       muted_alpha=0.2, muted_color=colors[i],
+                  legend_label=ELEMENT_NAME + str(i) + '+') for i in range(ch_states_to_show[0], ch_states_to_show[1]+1, 1)]
+
 if not show_legend:
     csd_plot.legend.items=[]
 
