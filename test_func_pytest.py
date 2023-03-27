@@ -16,7 +16,7 @@ def test_hydrogen():
 
 """
 def test_csd_plot():
-    """test dummy CSD plot generation"""
+    #test dummy CSD plot generation
     csd_plot = csd.csd_base_figure()
     curdoc().add_root(csd_plot)
     figure_json = curdoc().to_json()
@@ -32,7 +32,7 @@ def test_csd_plot():
 
 
 def test_cs_plot():
-    """test dummy CS plot generation"""
+    #test dummy CS plot generation
     cs_plot = csd.cs_base_figure()
     curdoc().add_root(cs_plot)
     figure_json = curdoc().to_json()
