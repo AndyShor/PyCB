@@ -4,7 +4,7 @@ unit test check basic functionality as well as
 compare output of CSD.py functions against known reference numbers
 """
 import pytest
-from bokeh.io import curdoc
+#from bokeh.io import curdoc
 import numpy as np
 import csd
 
