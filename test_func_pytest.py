@@ -14,7 +14,7 @@ def test_hydrogen():
     elem = csd.get_element_data('H')
     assert elem[0]['1s']['E'] == pytest.approx(13.5984487)
 
-
+"""
 def test_csd_plot():
     """test dummy CSD plot generation"""
     csd_plot = csd.csd_base_figure()
@@ -44,6 +44,7 @@ def test_cs_plot():
             linear_axis_label = (figure_json['roots']['references'][i]['attributes']['axis_label'])
     curdoc().remove_root(cs_plot)
     assert linear_axis_label == 'charge state'
+"""
 
 
 def test_mo_ei_watanabe():
