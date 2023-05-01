@@ -6,7 +6,7 @@ pytest-cov
 panel==0.9.6
 numba==0.49.0
 click==8.0.4
-Flask==2.0.3
+Flask==2.3.2
 itsdangerous==2.1.2
 Jinja2==3.0.0
 MarkupSafe==2.1.1
