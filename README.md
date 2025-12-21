@@ -7,7 +7,7 @@ Status](https://github.com/AndyShor/PyCB/workflows/build_and_test/badge.svg)](ht
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AndyShor/PyCB/master?filepath=CSD_notebook_online.ipynb) -  notebook with simple inline graphics 
 
-
+Live web interface available at https://andyshor.github.io/web_pycb/ (web demo handles simulations up to 30s, sufficient for most apart from bare Uranium and a like)
 
 # About
 
@@ -280,6 +280,7 @@ on example of Fe in charge states 8,16,24,26 for electron energies 2964, 9646, 1
 [Zhao](http://dx.doi.org/10.1063/1.4934686)
 
 [Zschornack](https://cds.cern.ch/record/1965922/files/CERN-2013-007-p165.pdf)
+
 
 
 
